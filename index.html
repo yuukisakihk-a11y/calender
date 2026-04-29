@@ -12,39 +12,30 @@
   <meta name="theme-color" content="#1a2744">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { width: 100%; height: 100%; overflow: hidden; background: #1a2744; }
-    iframe {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: none;
-    }
-    #loading {
-      position: fixed;
-      inset: 0;
+    body {
       background: #1a2744;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: #c8a84b;
+      height: 100vh;
       font-family: sans-serif;
-      z-index: 999;
+      color: #c8a84b;
     }
-    #loading img { width: 100px; margin-bottom: 20px; border-radius: 20px; }
-    #loading p { font-size: 16px; letter-spacing: 2px; }
+    img { width: 120px; border-radius: 24px; margin-bottom: 24px; }
+    p { font-size: 18px; letter-spacing: 2px; margin-bottom: 8px; }
+    small { font-size: 13px; color: #aaa; }
   </style>
+  <meta http-equiv="refresh" content="1;url=https://script.google.com/macros/s/AKfycby1TGPF17n_5DP1XKNeXSPWDeruKYFMCWCI8QtRU6y9rQLfqmJhBaKnSiTXm0toqflq/exec">
 </head>
 <body>
-  <div id="loading">
-    <img src="icon.png" alt="神山カレンダー">
-    <p>読み込み中...</p>
-  </div>
-  <iframe
-    id="app"
-    src="https://script.google.com/macros/s/AKfycby1TGPF17n_5DP1XKNeXSPWDeruKYFMCWCI8QtRU6y9rQLfqmJhBaKnSiTXm0toqflq/exec"
-    allow="geolocation"
-    onload="document.getElementById('loading').style.display='none'"
-  ></iframe>
+  <img src="icon.png" alt="神山カレンダー">
+  <p>神山カレンダー</p>
+  <small>読み込み中...</small>
+  <script>
+    setTimeout(function() {
+      window.location.href = "https://script.google.com/macros/s/AKfycby1TGPF17n_5DP1XKNeXSPWDeruKYFMCWCI8QtRU6y9rQLfqmJhBaKnSiTXm0toqflq/exec";
+    }, 500);
+  </script>
 </body>
 </html>
